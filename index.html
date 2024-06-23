@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookshelf Apps</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      border-color: blue;
+    }
+    .form-input {
+      margin-bottom: 20px;
+    }
+    .book-list {
+      display: flex;
+      justify-content: space-between;
+    }
+    .book-list div {
+      width: 45%;
+    }
+    .book-item {
+      border: 6px solid #3c2c2c;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bookshelf Apps</h1>
+    <div class="form-input">
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="number" id="year" placeholder="Year" required>
+      <input type="checkbox" id="isComplete"> Selesai
+      <button onclick="addBook()">Tambahkan Buku</button>
+    </div>
+    <div class="form-input">
+      <input type="text" id="search" placeholder="Search by title" oninput="searchBooks()">
+    </div>
+    <div class="book-list">
+      <div>
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookshelfList"></div>
+      </div>
+      <div>
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookshelfList"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
